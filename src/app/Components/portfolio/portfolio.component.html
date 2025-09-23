@@ -2,59 +2,20 @@
     <h2 class="heading">Latest <span>Project</span></h2>
 
     <div class="portfolio-container">
-        <div class="portfolio-box">
-            <img src="../../assets/img/portfolio/kankyStore.png" alt="">
 
-            <div class="portfolio-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
-            </div>
-        </div>
-        <div class="portfolio-box">
-            <img src="../../assets/img/portfolio/peluDelLauti.png" alt="">
+      @for(item of project; track item){
 
-            <div class="portfolio-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
-            </div>
-        </div>
         <div class="portfolio-box">
-            <img src="../../assets/img/portfolio/fix.png" alt="">
+          <img src="{{item.img}}" alt="">
 
-            <div class="portfolio-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
-            </div>
+          <div class="portfolio-layer">
+            <h4>{{item.title}}</h4>
+            <p>{{item.description}}</p>
+            <a href="{{item.url}}" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+          </div>
         </div>
-        <div class="portfolio-box">
-            <img src="../../assets/img/portfolio/kankyStore.png" alt="">
-l
-            <div class="portfolio-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
-            </div>
-        </div>
-        <div class="portfolio-box">
-            <img src="../../assets/img/portfolio/kankyStore.png" alt="">
 
-            <div class="portfolio-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
-            </div>
-        </div>
-        <div class="portfolio-box">
-            <img src="../../assets/img/portfolio/kankyStore.png" alt="">
+      }
 
-            <div class="portfolio-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
-            </div>
-        </div>
     </div>
 </section>
