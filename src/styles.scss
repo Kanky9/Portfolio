@@ -34,11 +34,14 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    max-width: 100%; /* Added to prevent overflow */
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden; /* Added to prevent overflow */
+    max-width: 100%; /* Added to prevent overflow */
 }
 
 .header {
@@ -128,11 +131,6 @@ section {
 .home .home-content {
     max-width: 44rem;
 }
-
-// .home .home-content img{
-//     border-radius: 50%;
-//     width: 45rem;
-// }
 
 .home-content h3 {
     font-size: 1.6rem;
@@ -556,8 +554,6 @@ span {
     .home .profession-container .overlay {
         right: -6%;
     }
-
-
 }
 
 @media (max-width: 1100px) {
@@ -582,7 +578,6 @@ span {
     .home .profession-container .overlay {
         right: -12%;
     }
-
 }
 
 @media (max-width: 991px) {
@@ -843,4 +838,5 @@ span {
 
 img {
     border-radius: 20px;
+    max-width: 100%; /* Added to prevent overflow */
 }
