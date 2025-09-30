@@ -1,16 +1,26 @@
 <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me!</span></h2>
+  <h2 class="heading">Contáctame</h2>
 
-    <form action="#">
-        <div class="input-box">
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
-        </div>
-        <div class="input-box">
-            <input type="number" placeholder="Mobile Number">
-            <input type="text" placeholder="Email Subject">
-        </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
-    </form>
+  <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+    <div class="input-box">
+      <input type="text" placeholder="Nombre completo" formControlName="fullName">
+      <input type="email" placeholder="Correo electrónico" formControlName="email">
+    </div>
+    <div class="input-box">
+      <input type="number" placeholder="Teléfono" formControlName="mobile">
+      <input type="text" placeholder="Asunto" formControlName="subject">
+    </div>
+    <textarea cols="30" rows="10" placeholder="Escribe tu mensaje" formControlName="message"></textarea>
+    <input type="submit" value="Enviar mensaje" class="btn" [disabled]="isSending">
+  </form>
+
+  @if(sent){
+
+    <p style="color:#008000">✅ Tu mensaje fue enviado con éxito.</p>
+
+  } @else if (error) {
+
+    <p style="color:#ff0000">⚠️ Hubo un error al enviar el mensaje. Intenta nuevamente.</p>
+
+  }
 </section>
