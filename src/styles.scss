@@ -128,6 +128,46 @@ section {
     align-items: center;
 }
 
+.home .profile-img {
+    position: absolute;
+    top: 50%;
+    right: 384px; /* coincide con el ancho del triángulo */
+    transform: translate(50%, -50%); /* centra la imagen justo en la punta */
+    width: 300px; /* ajustá tamaño según necesites */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+// .home .profile-img {
+//   position: absolute;
+//   top: 50%;
+//   right: clamp(200px, 25vw, 384px); /* se ajusta dinámicamente al ancho de pantalla */
+//   transform: translate(50%, -50%);
+//   width: clamp(120px, 18vw, 280px); /* escala proporcional */
+//   height: clamp(120px, 18vw, 280px);
+//   object-fit: cover;
+//   border-radius: 50%;
+//   border: 3px solid var(--main-color);
+//   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+//   z-index: 5;
+// }
+
+@media (max-width: 1200px) {
+  .home .profile-img {
+    display: none;
+    // position: relative;
+    // right: auto;
+    // top: auto;
+    // transform: none;
+    // display: block;
+    // margin: 0 auto 2rem;
+  }
+}
+
 .home .home-content {
     max-width: 44rem;
 }
